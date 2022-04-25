@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<body>
+    <main>
+        <br>
+        <div class="container rounded border" style="width:20%; margin-bottom:27.5%; text-align:center;">
+            <br>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                {{ form.email.label }} <br>
+                {{ form.email() }}<br>
+                {{ form.password.label }} <br>
+                {{ form.password() }}<br><br>
+                {{ form.submit() }}
+            </form>
+            <br>
+        </div>
+    </main>
+    <footer>
+        <p align="center" style="color:rgb(0, 0, 0); margin-top:5%">© 2022 MiDo</p>
+    </footer>
+</body>
+{% endblock %}

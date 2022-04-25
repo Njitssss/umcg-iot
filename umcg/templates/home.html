@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Hoofdpagina {% endblock %}
+{% block content %}
+<body style="background-image: url(static/images/zeeduin.jpeg); background-size: cover; background-repeat: no-repeat; min-height: 100%; position: relative;">
+    <main>
+        <br><br><br>
+        <div class="container-lg border rounded" style="background-color: white; padding:3%;">
+            <br>
+            {% if current_user.is_authenticated %}
+                <h1>Welkom {{ current_user.username }}!</h1>
+            {% else%}
+                <h1>Welkom gast!</h1>
+            {% endif %}
+                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5><br><br>
+                <div class="container-lg border rounded" style="background-color: #eeee;"><br>
+                    <h1>Informatie</h1><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div><br>
+        </div>
+    </main>
+    <footer>
+        <p align="center" style="color:rgb(0, 0, 0); margin-top:5%">© 2022 MiDo</p>
+    </footer>
+</body>
+{% endblock %}
